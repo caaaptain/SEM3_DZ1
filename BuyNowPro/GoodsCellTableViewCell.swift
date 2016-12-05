@@ -1,10 +1,4 @@
-//
-//  JokeCellTableViewCell.swift
-//  FirebaseJokes
-//
-//  Created by Matthew Maher on 1/23/16.
-//  Copyright © 2016 Matt Maher. All rights reserved.
-//
+
 
 import UIKit
 import Firebase
@@ -40,13 +34,13 @@ class JokeCellTableViewCell: UITableViewCell {
             
             if let thumbsUpDown = snapshot.value as? NSNull {
                 
-                // Current user hasn't voted for the joke... yet.
+             
                 
                 print(thumbsUpDown)
                 self.thumbVoteImage.image = UIImage(named: "thumb-down")
             } else {
                 
-                // Current user voted for the joke!
+              
                 
                 self.thumbVoteImage.image = UIImage(named: "thumb-up")
             }
@@ -63,7 +57,7 @@ class JokeCellTableViewCell: UITableViewCell {
                 print(thumbsUpDown)
                 self.thumbVoteImage.image = UIImage(named: "thumb-down")
                 
-                // addSubtractVote(), in Joke.swift, handles the vote.
+               
                 
                 self.joke.addSubtractVote(true)
                 
