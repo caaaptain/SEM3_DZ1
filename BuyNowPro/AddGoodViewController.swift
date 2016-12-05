@@ -1,11 +1,3 @@
-//
-//  AddJokeViewController.swift
-//  FirebaseJokes
-//
-//  Created by Matthew Maher on 1/23/16.
-//  Copyright © 2016 Matt Maher. All rights reserved.
-//
-
 import UIKit
 import Firebase
 
@@ -17,7 +9,7 @@ class AddJokeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Get username of the current user, and set it to currentUsername, so we can add it to the Joke.
+        
         
         DataService.dataService.CURRENT_USER_REF.observeEventType(FEventType.Value, withBlock: { snapshot in
             
@@ -40,8 +32,7 @@ class AddJokeViewController: UIViewController {
         
         if jokeText != "" {
             
-            // Build the new Joke.
-            // AnyObject is needed because of the votes of type Int.
+           
             
             let newJoke: Dictionary<String, AnyObject> = [
                 "jokeText": jokeText! as AnyObject,
@@ -49,7 +40,7 @@ class AddJokeViewController: UIViewController {
                 "author": currentUsername as AnyObject
             ]
             
-            // Send it over to DataService to seal the deal.
+           
             
             DataService.dataService.createNewJoke(newJoke)
             
