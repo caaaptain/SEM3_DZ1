@@ -1,0 +1,6 @@
+framework module Pods_BuyNowProUITests {
+  umbrella header "Pods-BuyNowProUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

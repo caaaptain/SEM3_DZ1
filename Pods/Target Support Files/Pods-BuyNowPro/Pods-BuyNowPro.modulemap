@@ -1,0 +1,6 @@
+framework module Pods_BuyNowPro {
+  umbrella header "Pods-BuyNowPro-umbrella.h"
+
+  export *
+  module * { export * }
+}
