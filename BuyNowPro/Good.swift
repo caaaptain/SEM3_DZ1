@@ -1,10 +1,3 @@
-//
-//  Joke.swift
-//  FirebaseJokes
-//
-//  Created by Matthew Maher on 1/23/16.
-//  Copyright © 2016 Matt Maher. All rights reserved.
-//
 
 import Foundation
 import Firebase
@@ -33,12 +26,12 @@ class Joke {
         return _username
     }
     
-    // Initialize the new Joke
+
     
     init(key: String, dictionary: Dictionary<String, AnyObject>) {
         self._jokeKey = key
         
-        // Within the Joke, or Key, the following properties are children
+
         
         if let votes = dictionary["votes"] as? Int {
             self._jokeVotes = votes
@@ -53,8 +46,7 @@ class Joke {
         } else {
             self._username = ""
         }
-        
-        // The above properties are assigned to their key.
+
         
         self._jokeRef = DataService.dataService.JOKE_REF.childByAppendingPath(self._jokeKey)
     }
